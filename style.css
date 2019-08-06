@@ -1,0 +1,159 @@
+/* RESET */
+
+h1, p, ul, body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* General */
+
+body {
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 30px;
+}
+
+/* Header */
+
+#logo {
+  max-width: 50%;
+}
+
+/* Main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  margin: 40px auto;
+}
+
+main h1, main p {
+  margin-bottom: 30px;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.7em;
+}
+
+p, #btn {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+#btn {
+  background-color: white;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  color: hsl(257, 40%, 49%);
+  margin-bottom: 30px;
+  cursor: pointer; 
+  
+}
+
+footer p {
+  color: white;
+}
+
+/* Footer */
+
+footer svg {
+  
+  width: 30px;
+  padding: 20%;  
+  fill: white;  
+}
+
+footer li{
+  height: 50px;
+  width: 50px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 15px;
+  
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: white;
+}
+
+/* Grid Templates */
+
+.left {
+  grid-area: left;
+}
+
+.rigth {
+  grid-area: rigth;
+}
+
+/* Queries */
+
+@media(min-width:1300px) {
+  body {
+    
+    display: grid;    
+    grid-template-areas: "left rigth";
+    grid-template-columns: 1fr 1fr;
+    height: 90vh;
+    grid-gap: 30px;    
+  }
+  .left {
+    align-content: center;    
+  } 
+  h1 {
+    font-size: 3.5em;
+    text-align: left !important;
+  }
+  main p {
+    font-size: 1.5em;
+    text-align: left !important;
+  }
+  img, main {
+    align-self: center;    
+  }
+  #btn {
+    align-self: flex-start; 
+    transition: .3s ease-in-out;
+  }
+
+  #btn:hover{
+    
+    background-color: red;
+    
+  }
+
+
+  
+  
+
+  
+  
+  footer {
+    align-self: flex-end;
+    justify-self: flex-end;
+  }
+}
