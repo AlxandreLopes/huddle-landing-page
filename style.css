@@ -140,17 +140,9 @@ nav ul {
     transition: .3s ease-in-out;
   }
 
-  #btn:hover{
-    
-    background-color: red;
-    
-  }
-
-
-  
-  
-
-  
+  #btn:hover{    
+    background-color: red;    
+  } 
   
   footer {
     align-self: flex-end;
